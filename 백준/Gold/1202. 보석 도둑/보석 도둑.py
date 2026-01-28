@@ -7,11 +7,8 @@ n, k = map(int, input().split())
 jewel = []
 bag = []
 
-for i in range(n):
-    jewel.append(list(map(int, input().split())))
-
-for i in range(k):
-    bag.append(int(input()))
+jewel = [tuple(map(int, input().split())) for _ in range(n)]
+bag = [int(input()) for _ in range(k)]
 
 jewel.sort()
 bag.sort()
